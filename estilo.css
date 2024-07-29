@@ -1,0 +1,75 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+body {
+    background: #EEF9BF;
+}
+
+.top h1 {
+font: Roboto;
+font-size: 56px;
+margin-top: 40px;
+margin-left: 285px;
+color: #75B79E;
+}
+
+
+.game_card {
+    justify-content:space-around;
+    align-items: center;
+    width:800px;
+    margin-top:100px;
+    margin-left: 122px;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-auto-flow: column;
+}
+
+.timer {
+    transform: rotateY(0deg);
+  }
+
+.flipped {
+    transform: rotateY(-180deg);
+}  
+
+.cards {
+    height: 146px;
+    width: 117px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #A7E9AF   ;
+    border-radius: 5px;
+    border: 1px;
+    margin: 10px;
+    border-color: #99CEA8;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    padding: 10px;
+}
+
+.cards img {
+    width: 100px;
+    height: 100px;
+}
+
+
+
+
+.side {
+    cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  backface-visibility: hidden; 
+  overflow: auto;
+}
+
+.card-close {
+    position: absolute;
+
+  }
+  
+.card-open {
+    position: absolute;
+    transform:rotatey(-180deg);
+}
