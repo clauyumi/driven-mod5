@@ -2,6 +2,8 @@
 
 body {
     background: #EEF9BF;
+    margin: 0;
+    padding: 0;
 }
 
 .top h1 {
@@ -14,15 +16,14 @@ color: #75B79E;
 
 
 .game_card {
-    justify-content:space-around;
-    align-items: center;
-    width:800px;
     margin-top:100px;
-    margin-left: 122px;
-    display: grid;
-    grid-template-rows: repeat(2, auto);
+    margin-left: 200px;
     grid-auto-flow: column;
-}
+    padding: 10px;
+    flex-wrap: wrap;
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Define colunas responsivas */
+    gap: 10px; /* Espaço entre as cartas */}
 
 .timer {
     transform: rotateY(0deg);
@@ -31,6 +32,12 @@ color: #75B79E;
 .flipped {
     transform: rotateY(-180deg);
 }  
+
+/* Classe para cartas viradas */
+.open {
+    transform: rotateY(180deg);
+  }
+
 
 .cards {
     height: 146px;
