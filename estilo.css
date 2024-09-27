@@ -4,26 +4,40 @@ body {
     background: #EEF9BF;
     margin: 0;
     padding: 0;
+    display: grid;
 }
 
 .top h1 {
 font: Roboto;
 font-size: 56px;
 margin-top: 40px;
-margin-left: 285px;
+margin-left: 150px;
 color: #75B79E;
+text-align: center;
+}
+
+
+.top {
+    justify-content: center;
+    align-items: center;
+
 }
 
 
 .game_card {
+
     margin-top:100px;
-    margin-left: 200px;
+    margin-left: 100px;
     grid-auto-flow: column;
     padding: 10px;
     flex-wrap: wrap;
+    justify-content: center;
     display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Define colunas responsivas */
-    gap: 10px; /* Espaço entre as cartas */}
+    grid-template-rows: repeat(2, auto);
+    gap: 10px; 
+    flex: 1 1 100wv; 
+
+}
 
 .timer {
     transform: rotateY(0deg);
@@ -48,7 +62,7 @@ color: #75B79E;
     background-color: #A7E9AF   ;
     border-radius: 5px;
     border: 1px;
-    margin: 10px;
+    margin: 5px;
     border-color: #99CEA8;
     transform-style: preserve-3d;
     transition: 0.5s;

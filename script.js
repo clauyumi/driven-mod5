@@ -98,39 +98,32 @@ function selectcard(card) {
   countclicks++;
 
 const elemimage = card.querySelector('.card-open img').src;
-const cardsopen = card.querySelectorAll('.cards flipped');
+const elem = document.querySelectorAll(".cards");
 
 clickCard.push(elemimage);
 if(clickCard.length===2){
 
                 if (clickCard[0]===clickCard[1]) {
                   equal++;
-                  cardsopen[0].classList.remove("flipped");
-                  cardsopen[0].classList.add("open");
-                  cardsopen[1].classList.remove("flipped");
-                  cardsopen[1].classList.add("open");
-                 // clickCard=[];
+                  open();
+                  clickCard=[];
                   setTimeout(finalizar,1000);
+                  
                   }
 
                   if (clickCard[0]!==clickCard[1]) {
-                    setTimeout(() => {
-                      cardsopen[0].classList.remove("flipped");
-                      cardsopen[1].classList.remove("flipped");
-                      cardsopen[0].classList.add("timer");
-                      cardsopen[1].classList.add("timer");
-                    },1500)
-                   // clickCard=[];
+                    setTimeout(voltar,1500);
 
+                    clickCard=[];
 
                   }
                 }
 
 
-console.log(card.length);
+console.log(cardsshow);
 //console.log(clickCard);
-//console.log(elemimage);
-//console.log(elemimage.lenght);
+console.log(equal);
+console.log(elem.lenght);
 
 }
 
@@ -164,7 +157,7 @@ const elemimage = document.querySelector('.card-open');
           //  clickCard=[];
              // setTimeout(finalizar,1000);}
 
-console.log(elemimage);
+console.log(cardsshow);
 //console.log(equal);
 //console.log(clickCard.length);
 
